@@ -1,4 +1,4 @@
-# RIotBoard 
+# RIotBoard
 ## Product Introduction
 The RIoTboard is an evaluation platform featuring the powerful i.MX 6Solo, a
 multimedia application processor with ARM Cortex-A9 core at 1 GHz from Freescale
@@ -8,7 +8,7 @@ and SD card interface, USB, serial port, JTAG, 2 camera interfaces, GPIO boot
 configuration interface, and expansion port.
 
 Releases:
-* [Kernel 6.5.7](#Kernel 6.5.7)
+* [Kernel 6.5.7](#kernel-6.5.7)
 * [u-boot - 2018.05 ](#u-boot)
 * Debian 11(bullseye)
 
@@ -22,7 +22,7 @@ Uboot Build instructions.
 ```sh
     sudo apt-get install device-tree-compiler gcc-arm-linux-gnueabi
 ```
-                
+
 
 
 * Build and Install u-boot (SD/MMC card)
@@ -47,7 +47,7 @@ Uboot Build instructions.
 Kernel 6.5.7 is rock solid in RIotBoard, building **Kernel 6.5.7** with gcc-12 on uSD for testing new devfreq and checking stability.
 The board works great in real time using Gstreamer and a hardware h264 encoder.
 
-![webrtc](https://github.com/yjdwbj/imx6-riotboard/raw/master/webrtc-sendonly-htop.png)
+![webrtc](https://github.com/yjdwbj/imx6-riotboard/raw/main/webrtc-sendonly-htop.png)
 
 
 Testing mainline **6.5.7**, current status:
@@ -93,13 +93,13 @@ Vulnerability Spectre v1:           Mitigation; __user pointer sanitization
 Vulnerability Spectre v2:           Mitigation; Branch predictor hardening
 Vulnerability Srbds:                Not affected
 Vulnerability Tsx async abort:      Not affected
-Flags:                              half thumb fastmult vfp edsp neon vfpv3 tls 
+Flags:                              half thumb fastmult vfp edsp neon vfpv3 tls
                                     vfpd32
-riot@bullseye:~$ cat /proc/cpuinfo 
+riot@bullseye:~$ cat /proc/cpuinfo
 processor       : 0
 model name      : ARMv7 Processor rev 10 (v7l)
 BogoMIPS        : 6.00
-Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32
 CPU implementer : 0x41
 CPU architecture: 7
 CPU variant     : 0x2
@@ -164,7 +164,7 @@ Doing aes-128-gcm for 3s on 8192 size blocks: 10972 aes-128-gcm's in 3.00s
 Doing aes-128-gcm for 3s on 16384 size blocks: 5305 aes-128-gcm's in 3.00s
 OpenSSL 1.1.1w  11 Sep 2023
 built on: Wed Sep 13 19:21:33 2023 UTC
-options:bn(64,32) rc4(char) des(long) aes(partial) blowfish(ptr) 
+options:bn(64,32) rc4(char) des(long) aes(partial) blowfish(ptr)
 compiler: gcc -fPIC -pthread -Wa,--noexecstack -Wall -Wa,--noexecstack -g -O2 -ffile-prefix-map=/build/reproducible-path/openssl-1.1.1w=. -fstack-protector-strong -Wformat -Werror=format-security -DOPENSSL_USE_NODELETE -DOPENSSL_P2
 The 'numbers' are in 1000s of bytes per second processed.
 type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes  16384 bytes
@@ -228,19 +228,19 @@ tailscale0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
 ## Jack
 
 ```sh
-riot@bullseye:~$ play Deepside-BootyMusic.mp3 
+riot@bullseye:~$ play Deepside-BootyMusic.mp3
 play WARN alsa: can't encode 0-bit Unknown or not applicable
 
 Deepside-BootyMusic.mp3:
 
  File Size: 7.29M     Bit Rate: 321k
   Encoding: MPEG audio    Info: 2008
-  Channels: 2 @ 16-bit   
+  Channels: 2 @ 16-bit
 Samplerate: 44100Hz      Album: www.RnB4U.in
 Replaygain: off         Artist: Deepside - Booty Music (2008 CDQ Shoutless) [www.RnB4U.in]
   Duration: 00:03:01.79  Title: Deepside - Booty Music (2008 CDQ Shoutless) [www.RnB4U.in]
 
-In:4.60% 00:00:08.36 [00:02:53.43] Out:369k  [    -=|=     ]        Clip:0    
+In:4.60% 00:00:08.36 [00:02:53.43] Out:369k  [    -=|=     ]        Clip:0
 
 
 ```
@@ -248,19 +248,19 @@ In:4.60% 00:00:08.36 [00:02:53.43] Out:369k  [    -=|=     ]        Clip:0
 ## HDMI
 
 ```sh
-riot@bullseye:~$ AUDIODEV=hw:0,0 play Deepside-BootyMusic.mp3 
+riot@bullseye:~$ AUDIODEV=hw:0,0 play Deepside-BootyMusic.mp3
 play WARN alsa: can't encode 0-bit Unknown or not applicable
 
 Deepside-BootyMusic.mp3:
 
  File Size: 7.29M     Bit Rate: 321k
   Encoding: MPEG audio    Info: 2008
-  Channels: 2 @ 16-bit   
+  Channels: 2 @ 16-bit
 Samplerate: 44100Hz      Album: www.RnB4U.in
 Replaygain: off         Artist: Deepside - Booty Music (2008 CDQ Shoutless) [www.RnB4U.in]
   Duration: 00:03:01.79  Title: Deepside - Booty Music (2008 CDQ Shoutless) [www.RnB4U.in]
 
-In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0    
+In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 ```
 
 ## Boot log (booting from uSD Card)
@@ -283,7 +283,7 @@ In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 [    0.000000] CPU: All CPU(s) started in SVC mode.
 [    0.000000] percpu: Embedded 18 pages/cpu s43572 r8192 d21964 u73728
 [    0.000000] pcpu-alloc: s43572 r8192 d21964 u73728 alloc=18*4096
-[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+[    0.000000] pcpu-alloc: [0] 0 [0] 1
 [    0.000000] Kernel command line: ttymxc1,115200 nosmp video=mxcfb0:dev=hdmi,1280x720M@60,bpp=32 net.ifnames=0 video=mxcfb1:off fbmem=10M vmalloc=400M rootwait root=PARTUUID=de3dc445-02 init=/sbin/init
 [    0.000000] Unknown kernel command line parameters "fbmem=10M", will be passed to user space.
 [    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes, linear)
@@ -589,8 +589,8 @@ In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 [    5.403944]     fbmem=10M
 [    5.605334] usb 1-1.1: New USB device found, idVendor=0bda, idProduct=0811, bcdDevice= 2.00
 [    5.614180] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[    5.621751] usb 1-1.1: Product: 802.11ac WLAN Adapter 
-[    5.627145] usb 1-1.1: Manufacturer: Realtek 
+[    5.621751] usb 1-1.1: Product: 802.11ac WLAN Adapter
+[    5.627145] usb 1-1.1: Manufacturer: Realtek
 [    5.631627] usb 1-1.1: SerialNumber: 00e04c000001
 [    6.173725] systemd[1]: Failed to find module 'autofs4'
 [    6.276643] systemd[1]: systemd 247.3-7+deb11u4 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
@@ -676,14 +676,14 @@ In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 
 [   31.570231] ============================================
 [   31.575572] WARNING: possible recursive locking detected
-[   31.580915] 6.5.7-lcy-20231018 #1 Tainted: G           O      
+[   31.580915] 6.5.7-lcy-20231018 #1 Tainted: G           O
 [   31.586777] --------------------------------------------
 [   31.592115] ip/304 is trying to acquire lock:
 [   31.596497] c44f108c (pmutex){+.+.}-{3:3}, at: usbctrl_vendorreq+0x74/0x24c [88XXau]
-[   31.604682] 
+[   31.604682]
                but task is already holding lock:
 [   31.610549] c44f00d8 (pmutex){+.+.}-{3:3}, at: netdev_open+0x2c/0x4c [88XXau]
-[   31.618053] 
+[   31.618053]
                other info that might help us debug this:
 [   31.624615]  Possible unsafe locking scenario:
 
@@ -691,7 +691,7 @@ In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 [   31.633029]        ----
 [   31.635494]   lock(pmutex);
 [   31.638316]   lock(pmutex);
-[   31.641137] 
+[   31.641137]
                 *** DEADLOCK ***
 
 [   31.647087]  May be due to missing lock nesting notation
@@ -699,7 +699,7 @@ In:0.92% 00:00:01.67 [00:03:00.12] Out:73.7k [   ===|==-   ]        Clip:0
 [   31.653907] 2 locks held by ip/304:
 [   31.657419]  #0: c1be1be4 (rtnl_mutex){+.+.}-{3:3}, at: rtnetlink_rcv_msg+0x140/0x588
 [   31.665334]  #1: c44f00d8 (pmutex){+.+.}-{3:3}, at: netdev_open+0x2c/0x4c [88XXau]
-[   31.673274] 
+[   31.673274]
                stack backtrace:
 [   31.677658] CPU: 0 PID: 304 Comm: ip Tainted: G           O       6.5.7-lcy-20231018 #1
 [   31.685705] Hardware name: Freescale i.MX6 Quad/DualLite (Device Tree)
