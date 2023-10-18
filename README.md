@@ -8,6 +8,7 @@ and SD card interface, USB, serial port, JTAG, 2 camera interfaces, GPIO boot
 configuration interface, and expansion port.
 
 Releases:
+* [Kernel 6.5.7](#Kernel 6.5.7)
 * [u-boot - 2018.05 ](#u-boot)
 * Debian 11(bullseye)
 
@@ -34,7 +35,20 @@ Uboot Build instructions.
 
 ```
 
+* Pre-built
+
+```sh
+    https://github.com/yjdwbj/imx6-riotboard/archive/refs/tags/v1.0.tar.gz
+```
+
+
 ## Kernel 6.5.7
+
+Kernel 6.5.7 is rock solid in RIotBoard, building **Kernel 6.5.7** with gcc-12 on uSD for testing new devfreq and checking stability.
+The board works great in real time using Gstreamer and a hardware h264 encoder.
+
+![webrtc](https://github.com/yjdwbj/imx6-riotboard/raw/master/webrtc-sendonly-htop.png)
+
 
 Testing mainline **6.5.7**, current status:
 
@@ -159,13 +173,6 @@ aes-128-gcm      17936.92k    23436.95k    25572.69k    28901.38k    29960.87k  
 sha256            9798.42k    23344.96k    42350.93k    54806.87k    60298.58k    58605.57k
 
 ```
-## Kernel 6.5.7
-
-Kernel 6.5.7 is rock solid in RIotBoard, building **Kernel 6.5.7** with gcc-12 on uSD for testing new devfreq and checking stability.
-The board works great in real time using Gstreamer and a hardware h264 encoder.
-
-![webrtc](https://github.com/yjdwbj/imx6-riotboard/raw/master/webrtc-sendonly-htop.png)
-
 
 ## Networking (Wifi / Eth0 )
 
