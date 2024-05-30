@@ -64,7 +64,7 @@ Testing mainline **6.9.1**, current status:
 * CPU info
 
 ```sh
-riot@bullseye:~$ lscpu
+riot@bookwarm:~$ lscpu
 Architecture:                       armv7l
 Byte Order:                         Little Endian
 CPU(s):                             1
@@ -94,7 +94,7 @@ Vulnerability Srbds:                Not affected
 Vulnerability Tsx async abort:      Not affected
 Flags:                              half thumb fastmult vfp edsp neon vfpv3 tls
                                     vfpd32
-riot@bullseye:~$ cat /proc/cpuinfo
+riot@bookwarm:~$ cat /proc/cpuinfo
 processor       : 0
 model name      : ARMv7 Processor rev 10 (v7l)
 BogoMIPS        : 6.00
@@ -133,7 +133,7 @@ Last login: Tue May 21 22:19:39 2024 from 192.168.1.100
 
 * 7zr b
 ```sh
-riot@bullseye:~$ 7zr b
+riot@bookwarm:~$ 7zr b
 
 7-Zip (a) [32] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
 p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,32 bits,2 CPUs LE)
@@ -161,7 +161,7 @@ Tot:              95    657    627
 * openssl (crypto)
 
 ```sh
-riot@bullseye:~$ openssl speed -elapsed -evp aes-128-gcm aes-128-cbc sha256
+riot@bookwarm:~$ openssl speed -elapsed -evp aes-128-gcm aes-128-cbc sha256
 You have chosen to measure elapsed time instead of user CPU time.
 Doing sha256 for 3s on 16 size blocks: 1837204 sha256's in 3.00s
 Doing sha256 for 3s on 64 size blocks: 1094295 sha256's in 3.00s
@@ -196,17 +196,17 @@ sha256            9798.42k    23344.96k    42350.93k    54806.87k    60298.58k  
 ## Networking (Wifi / Eth0 )
 
 ```sh
-riot@bullseye:~$ lsusb
+riot@bookwarm:~$ lsusb
 Bus 001 Device 004: ID 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter
 Bus 001 Device 003: ID 0bda:0811 Realtek Semiconductor Corp. Realtek 8812AU/8821AU 802.11ac WLAN Adapter [USB Wireless Dual-Band Adapter 2.4/5Ghz]
 Bus 001 Device 002: ID 1a40:0101 Terminus Technology Inc. Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-riot@bullseye:~$ brctl show
+riot@bookwarm:~$ brctl show
 bridge name	bridge id		STP enabled	interfaces
 br-lan		8000.061f332cd6df	no		eth0
 							wlan0
-riot@bullseye:~$ iw wlan0 info
+riot@bookwarm:~$ iw wlan0 info
 Interface wlan0
 	ifindex 5
 	wdev 0x1
@@ -216,7 +216,7 @@ Interface wlan0
 	wiphy 0
 	channel 44 (5220 MHz), width: 40 MHz, center1: 5230 MHz
 	txpower 20.00 dBm
-riot@bullseye:~$ iw wlan1 info
+riot@bookwarm:~$ iw wlan1 info
 Interface wlan1
 	ifindex 9
 	wdev 0x200000001
@@ -233,7 +233,7 @@ Interface wlan1
 ## tailscale
 
 ```sh
-riot@bullseye:~$ ifconfig tailscale0
+riot@bookwarm:~$ ifconfig tailscale0
 tailscale0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
         inet6 fe80::3d09:9c12:8d29:2318  prefixlen 64  scopeid 0x20<link>
         unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 500  (UNSPEC)
@@ -247,7 +247,7 @@ tailscale0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
 ## Jack
 
 ```sh
-riot@bullseye:~$ play Deepside-BootyMusic.mp3
+riot@bookwarm:~$ play Deepside-BootyMusic.mp3
 play WARN alsa: can't encode 0-bit Unknown or not applicable
 
 Deepside-BootyMusic.mp3:
@@ -267,7 +267,7 @@ In:4.60% 00:00:08.36 [00:02:53.43] Out:369k  [    -=|=     ]        Clip:0
 ## HDMI
 
 ```sh
-riot@bullseye:~$ AUDIODEV=hw:0,0 play Deepside-BootyMusic.mp3
+riot@bookwarm:~$ AUDIODEV=hw:0,0 play Deepside-BootyMusic.mp3
 play WARN alsa: can't encode 0-bit Unknown or not applicable
 
 Deepside-BootyMusic.mp3:
@@ -450,7 +450,7 @@ libpng warning: iCCP: known incorrect sRGB profile
 
 ![qt5-testing.png](images/qt5-testing.png)
 
-##  imx6-mipi-csi2 with parallel ov2640 testing
+##  imx6-mipi-csi2 with DVP Camera ov2640 testing
 
 * get the ov2640 probed and the imx6_media_csi module info
 
